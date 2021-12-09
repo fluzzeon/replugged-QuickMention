@@ -4,7 +4,7 @@ module.exports = (({Button, Separator}) => class MentionBtn extends React.Compon
     render() {
         if(!Button || !Separator) return null;
         return (<div>
-            <Tooltip color="black" postion="top" text={document.documentElement.lang == "de" ? "Zitieren" : "Mention"}>
+            <Tooltip color="primary" text={document.documentElement.lang == "de" ? "Zitieren" : "Mention"}>
                 {({onMouseLeave, onMouseEnter}) => (
                 <Button onClick={this.props.onClick.bind(this)} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
                     <svg width="24px" height="24px" style={{position: "relative", top: "-2px", right: "1px", overflow: "visible"}} className="icon-3Gkjwa">
